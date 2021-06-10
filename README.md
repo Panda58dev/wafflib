@@ -1,5 +1,3 @@
-# Waff Lib - this library contains ssh data transfer functions written in php.
-
 # Composition:
 -  [EN](#EN)
     - [What is __Waff Lib__ for?](#EN_what)
