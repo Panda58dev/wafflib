@@ -5,7 +5,7 @@
      */
     namespace Remote;
 
-    class Scan extends \Main\Operations
+    class scanLin extends \Main\Operations
     {
 
         //Scanning dirictories on the remote machine
