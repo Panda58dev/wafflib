@@ -11,7 +11,7 @@
         $arr = json_encode($_POST);
         $connect = new \Main\connect;
         $desc = $connect->connect($arr);
-        if ($desc !== 'false') {
+        if ($desc !== FALSE) {
             echo '<h1>The connection is established</h1>';
             echo '<h3>Descriptor: </h3>'.$desc;
         } else {

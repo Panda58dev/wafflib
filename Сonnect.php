@@ -19,7 +19,7 @@ class connect extends Operations
         if (!$session) {
             //Log entry
             $this->reportFile('Connection to ['.$arr["ip"].':'.$arr["port"].'] is failed;');
-            return json_encode(FALSE); 
+            return FALSE; 
         //If there is a connection
         } else {
             //Log in
@@ -30,7 +30,7 @@ class connect extends Operations
             } else {
                 //Log entry
                 $this->reportFile("Account log in failed;");
-                return json_encode(FALSE);
+                return FALSE;
             }
         }   
     }
