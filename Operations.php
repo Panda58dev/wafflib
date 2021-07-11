@@ -35,7 +35,7 @@ class Operations
         $this->reportFile('Coping file ['.$arr['file_name'].'] to the host-machine');
 
         //Copying using scp
-        if (ssh2_scp_recv($arr['session'], $arr['dir_serv_name'].'/'.$arr['file_name'], $arr['hard_name'].'\\'.$arr['dir_win_name'].'\\'.$arr['file_name'], 0744)) {
+        if (ssh2_scp_recv($arr['session'], $arr['remote_path'], $arr['host_path'])) {
             //Operation successful
             //Log entry
             $this->reportFile('The copy operation was successful!');
@@ -58,7 +58,7 @@ class Operations
         $this->reportFile('Sending a file to a remote machine;');
 
         //Sending using scp
-        if (ssh2_scp_send($arr['session'], $arr['hard_name'].'\\'.$arr['dir_win_name'].'\\'.$arr['file_name'], $arr['dir_serv_name'].'/'.$arr['file_name'], 0744)) {
+        if (ssh2_scp_send($arr['session'], $arr['host_path'], $arr['remote_path'], 0744)) {
             //Operation successful
             //Log entry
             $this->reportFile('The send operation was successful!');
