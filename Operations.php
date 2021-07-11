@@ -71,5 +71,15 @@ class Operations
         }
     }
 
+    //Function web-server shutdown
+    public function PowerOff($session)
+    {
+        //Log entry
+        $this->reportFile('Disconnecting from a remote machine');
+
+        //Disabling ssh connection
+        ssh2_disconnect($session);
+    }
+
 }
 ?> 
