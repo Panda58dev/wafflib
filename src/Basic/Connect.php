@@ -5,9 +5,9 @@ class Connect extends Report
 {
     public function connect(
         string $ip, 
-        int $port = 22, 
         string $name, 
-        string $pass = NULL
+        string $pass = NULL,
+        int    $port = 22
     ) : mixed
     {
         //Log entry
