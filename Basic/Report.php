@@ -16,7 +16,7 @@ class Report
         return TRUE;
     }
 
-    public function reportFile($message) : bool 
+    public function reportFile(string $message) : bool 
     {
         if ($this->setFile(fopen(REPORT_FILE, 'a'))) {
             fwrite($this->getFile(), date('d.m G:i:s - ').$message.PHP_EOL);
