@@ -1,5 +1,5 @@
 <?php
-namespace Panda58dev\Wafflib\Basic;
+namespace Wafflib\Basic;
 
 class Connect extends Report
 {

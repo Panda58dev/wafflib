@@ -1,5 +1,5 @@
 <?php
-namespace Panda58dev\Wafflib;
+namespace Wafflib;
 
 //Path to root directory
 define('ROOT_PATH', __DIR__);

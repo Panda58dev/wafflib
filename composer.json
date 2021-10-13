@@ -5,7 +5,7 @@
     "license": "Apache2",
     "autoload": {
         "psr-4": {
-            "Panda58dev\\Wafflib\\": "src/"
+            "Wafflib\\": "src/"
         }
     },
     "authors": [
