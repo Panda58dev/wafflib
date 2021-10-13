@@ -1,0 +1,19 @@
+{
+    "name": "panda58dev/wafflib",
+    "description": "WaffLib is a library consisting of methods for working with ssh.",
+    "type": "library",
+    "license": "Apache2",
+    "autoload": {
+        "psr-4": {
+            "Panda58dev\\Wafflib\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Panda58dev",
+            "email": "panda58.dev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
