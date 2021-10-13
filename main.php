@@ -9,34 +9,4 @@ define('REPORT_FILE', ROOT_PATH.'/log/report_ssh.txt');
 if (!file_exists(REPORT_FILE)) {
     mkdir(ROOT_PATH.'/log', 0744, TRUE);
 }
-
-class Main 
-{
-    private $file;
-
-    public function getFile()
-    {
-        return $this->file;
-    }
-
-    public function setFile($value)
-    {
-        $this->file = $value;
-        return TRUE;
-    }
-
-    public function reportFile($message) : bool 
-    {
-        if ($this->setFile(fopen(REPORT_FILE, 'a'))) {
-            fwrite($this->getFile(), date('d.m G:i:s - ').$message.PHP_EOL);
-            $this->setFile(fclose($this->getFile()));
-            return TRUE;
-        } else {
-            return FALSE;
-        }
-    }
-
-
-}
-
 ?>
