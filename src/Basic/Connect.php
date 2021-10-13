@@ -13,7 +13,7 @@ class Connect extends Report
         //Log entry
         $this->reportFile('Connect to ['.$ip.':'.$port.'];');
         //Connect
-        $session = ssh2_connect('ip', 'port');
+        $session = ssh2_connect($ip, $port);
 
         //If the connection is not established
         if (!$session) {
