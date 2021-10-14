@@ -1,7 +1,7 @@
 <?php
 namespace Wafflib\Basic;
 
-class Connect extends Report
+class Connect 
 {
     //A variable that stores the session descriptor
     private $session;
@@ -27,28 +27,28 @@ class Connect extends Report
     ) : mixed
     {
         //Log entry
-        $this->reportFile('Connect to ['.$ip.':'.$port.'];');
+        Report::reportFile('Connect to ['.$ip.':'.$port.'];');
         //Connect
         $this->setSession(ssh2_connect($ip, $port));
 
         //If the connection is not established
         if (!$this->getSession()) {
             //Log entry
-            $this->reportFile('Connection to ['.$ip.':'.$port.'] is failed;');
+            Report::reportFile('Connection to ['.$ip.':'.$port.'] is failed;');
             return FALSE;
         //If the connection is not established
         } else {
             //Log entry
-            $this->reportFile('The connection is established!');
+            Report::reportFile('The connection is established!');
 
             //Log in
             if (ssh2_auth_password($this->getSession(), $name, $pass)) {
                 //Log entry
-                $this->reportFile('Log in for the user ('.$name.') on the remote machine;');
+                Report::reportFile('Log in for the user ('.$name.') on the remote machine;');
                 return $this->getSession();
             } else {
                 //Log entry
-                $this->reportFile("Account log in failed;");
+                Report::reportFile("Account log in failed;");
                 return FALSE;
             }
         }

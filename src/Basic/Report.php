@@ -4,27 +4,27 @@ namespace Wafflib\Basic;
 class Report
 {
     //A variable that stores the file descriptor
-    private $file;
+    private static $file;
 
     //Receive the descriptor
-    public function getFile()
+    public static function getFile()
     {
-        return $this->file;
+        return self::$file;
     }
 
     //Change the descriptor
-    public function setFile($value)
+    public static function setFile($value)
     {
-        $this->file = $value;
+        self::$file = $value;
         return TRUE;
     }
 
     //Sending a log
-    public function reportFile(string $message) : bool 
+    public static function reportFile(string $message) : bool 
     {
-        if ($this->setFile(fopen(REPORT_FILE, 'a'))) {
-            fwrite($this->getFile(), date('d.m G:i:s - ').$message.PHP_EOL);
-            $this->setFile(fclose($this->getFile()));
+        if (self::setFile(fopen(REPORT_FILE, 'a'))) {
+            fwrite(self::getFile(), date('d.m G:i:s - ').$message.PHP_EOL);
+            self::setFile(fclose(self::getFile()));
             return TRUE;
         } else {
             return FALSE;
