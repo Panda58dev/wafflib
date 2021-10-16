@@ -7,13 +7,13 @@ class Report
     private static $file;
 
     //Receive the descriptor
-    public static function getFile()
+    private static function getFile()
     {
         return self::$file;
     }
 
     //Change the descriptor
-    public static function setFile($value)
+    private static function setFile($value)
     {
         self::$file = $value;
         return TRUE;
