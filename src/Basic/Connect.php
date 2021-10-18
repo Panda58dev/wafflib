@@ -19,12 +19,12 @@ class Connect
         return TRUE;
     }
 
-    public function connect(
+    public function __construct(
         string $ip, 
         string $name, 
         string $pass = NULL,
         int    $port = 22
-    ) : mixed
+    )
     {
         //Log entry
         Report::reportFile('Connect to ['.$ip.':'.$port.'];');
@@ -52,6 +52,15 @@ class Connect
                 return FALSE;
             }
         }
+    }
+
+    public function __destruct()
+    {
+        //Log entry
+        Report::reportFile('Disconnecting from a remote machine');
+
+        //Disabling ssh connection
+        ssh2_disconnect($this->getSession());
     }
 }
 
