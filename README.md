@@ -23,7 +23,6 @@ To begin with, we should warn you that most of the input data should be in the f
 
 - PHP v7.3 and higler. (Despite the fact that the code is written with backward compatibility, it is advisable to use new versions of PHP);
 - Extension **php_ssh2**. You can download the dll for **windows** on the website [PECL](https://pecl.php.net/package/ssh2);
-- Extension **php_openssl**.
 
 ----
 
@@ -40,7 +39,6 @@ To begin with, we should warn you that most of the input data should be in the f
 ## Требования
 - PHP *v7.3* и выше. (Не смотря на то, что код пишется с обратной совместимостью, желательно использовать новые версии PHP);
 - Расширение **php_ssh2**. Скачать dll для **windows** можно на сайте [PECL](https://pecl.php.net/package/ssh2);
-- Расширение **php_openssl**.
 
 <a name="RU_plans"></a>
 ## Планы
