@@ -4,7 +4,7 @@ namespace Wafflib\Basic;
 class Send
 {
     //Sending files to remote machine
-    public function __construct($session, string $host_path, string $remote_path)
+    public function send($session, string $host_path, string $remote_path)
     {
         //Log entry
         Report::reportFile('Sending a file ['.$host_path.'] to remote machine');
