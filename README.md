@@ -8,6 +8,7 @@
     - [Для чего нужен __Waff Lib__?](#RU_what)
     - [Как его __использовать__?](#RU_use)
     - [Требования](#RU_req)
+    - [Планы](#RU_plans)
     
 <a name="EN"></a>
 <a name="EN_what"></a>
@@ -41,3 +42,6 @@ To begin with, we should warn you that most of the input data should be in the f
 - Расширение **php_ssh2**. Скачать dll для **windows** можно на сайте [PECL](https://pecl.php.net/package/ssh2);
 - Расширение **php_openssl**.
 
+<a name="RU_plans"></a>
+## Планы
+На данный момент готовится выпуск 0.0.3, в котором будет переработана большая часть функций и изменена архитектура библиотеки.
