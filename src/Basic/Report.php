@@ -1,4 +1,5 @@
 <?php
+
 namespace Wafflib\Basic;
 
 class Report
@@ -16,19 +17,18 @@ class Report
     private static function setFile($value)
     {
         self::$file = $value;
-        return TRUE;
+        return true;
     }
 
     //Sending a log
-    public static function reportFile(string $message) : bool 
+    public static function reportFile(string $message): bool
     {
         if (self::setFile(fopen(REPORT_FILE, 'a'))) {
-            fwrite(self::getFile(), date('d.m G:i:s - ').$message.PHP_EOL);
+            fwrite(self::getFile(), date('d.m G:i:s - ') . $message . PHP_EOL);
             self::setFile(fclose(self::getFile()));
-            return TRUE;
+            return true;
         } else {
-            return FALSE;
+            return false;
         }
     }
 }
-?>

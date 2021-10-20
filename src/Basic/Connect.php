@@ -1,12 +1,12 @@
 <?php
+
 namespace Wafflib\Basic;
 
-class Connect 
+class Connect
 {
     //A variable that stores the session descriptor
     private $session;
-
-    //Get a descriptor
+//Get a descriptor
     public function getSession()
     {
         return $this->session;
@@ -16,40 +16,33 @@ class Connect
     public function setSession($value)
     {
         $this->session = $value;
-        return TRUE;
+        return true;
     }
 
-    public function __construct(
-        string $ip, 
-        string $name, 
-        string $pass = NULL,
-        int    $port = 22
-    )
+    public function __construct(string $ip, string $name, string $pass = null, int $port = 22)
     {
         //Log entry
-        Report::reportFile('Connect to ['.$ip.':'.$port.'];');
-        //Connect
+        Report::reportFile('Connect to [' . $ip . ':' . $port . '];');
+//Connect
         $this->setSession(ssh2_connect($ip, $port));
-
-        //If the connection is not established
+//If the connection is not established
         if (!$this->getSession()) {
-            //Log entry
-            Report::reportFile('Connection to ['.$ip.':'.$port.'] is failed;');
-            return FALSE;
-        //If the connection is not established
+//Log entry
+            Report::reportFile('Connection to [' . $ip . ':' . $port . '] is failed;');
+            return false;
+//If the connection is not established
         } else {
-            //Log entry
+        //Log entry
             Report::reportFile('The connection is established!');
-
-            //Log in
+        //Log in
             if (ssh2_auth_password($this->getSession(), $name, $pass)) {
-                //Log entry
-                Report::reportFile('Log in for the user ('.$name.') on the remote machine;');
+//Log entry
+                Report::reportFile('Log in for the user (' . $name . ') on the remote machine;');
                 return $this->getSession();
             } else {
-                //Log entry
+        //Log entry
                 Report::reportFile("Account log in failed;");
-                return FALSE;
+                return false;
             }
         }
     }
@@ -58,10 +51,7 @@ class Connect
     {
         //Log entry
         Report::reportFile('Disconnecting from a remote machine');
-
-        //Disabling ssh connection
+//Disabling ssh connection
         ssh2_disconnect($this->getSession());
     }
 }
-
-?>
