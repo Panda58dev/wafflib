@@ -6,7 +6,7 @@ class Connect
 {
     //A variable that stores the session descriptor
     private $session;
-//Get a descriptor
+	//Get a descriptor
     public function getSession()
     {
         return $this->session;
@@ -23,24 +23,24 @@ class Connect
     {
         //Log entry
         Report::reportFile('Connect to [' . $ip . ':' . $port . '];');
-//Connect
+		//Connect
         $this->setSession(ssh2_connect($ip, $port));
-//If the connection is not established
+		//If the connection is not established
         if (!$this->getSession()) {
-//Log entry
+			//Log entry
             Report::reportFile('Connection to [' . $ip . ':' . $port . '] is failed;');
             return false;
-//If the connection is not established
+		//If the connection is not established
         } else {
-        //Log entry
+			//Log entry
             Report::reportFile('The connection is established!');
-        //Log in
+			//Log in
             if (ssh2_auth_password($this->getSession(), $name, $pass)) {
-//Log entry
+				//Log entry
                 Report::reportFile('Log in for the user (' . $name . ') on the remote machine;');
                 return $this->getSession();
             } else {
-        //Log entry
+				//Log entry
                 Report::reportFile("Account log in failed;");
                 return false;
             }
@@ -51,7 +51,7 @@ class Connect
     {
         //Log entry
         Report::reportFile('Disconnecting from a remote machine');
-//Disabling ssh connection
+		//Disabling ssh connection
         ssh2_disconnect($this->getSession());
     }
 }

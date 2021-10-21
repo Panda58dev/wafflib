@@ -9,14 +9,14 @@ class Send
     {
         //Log entry
         Report::reportFile('Sending a file [' . $host_path . '] to remote machine');
-//Sending using scp
+		//Sending using scp
+		//Operation successful
         if (ssh2_scp_send($session, $host_path, $remote_path, 0744)) {
-//Operation successful
             //Log entry
             Report::reportFile('The send operation was successful!');
             return true;
+			//Operation failed
         } else {
-        //Operation failed
             //Log entry
             Report::reportFile('The send operation failed!');
             return false;

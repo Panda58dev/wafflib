@@ -12,14 +12,14 @@ class Copy
     {
         //Log entry
         Report::reportFile('Copying file [' . $remote_path . '] to the host-machine');
-//Copying using scp
+		//Copying using scp
+		//Operation successful
         if (ssh2_scp_recv($session, $remote_path, $host_path)) {
-//Operation successful
             //Log entry
             Report::reportFile('The copy operation was successful!');
             return true;
-        } else {
         //Operation failed
+        } else {
             //Log entry
             Report::reportFile('The copy operation failed!');
             return false;
