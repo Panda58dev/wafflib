@@ -17,7 +17,7 @@ This library is an object oriented __API__ for working with __ssh__ protocol.
 
 <a name="EN_use"></a>
 ## How to _use_ it?
-To begin with, we should warn you that most of the input data should be in the form of a _variable_/_array_ in the **json** format. A detailed description of each function can be found in the [wiki](https://github.com/Panda58dev/wafflib/wiki).
+A detailed description of each function can be found in the [wiki](https://github.com/Panda58dev/wafflib/wiki).
 <a name="EN_req"></a>
 ## Requirements
 
@@ -33,7 +33,7 @@ To begin with, we should warn you that most of the input data should be in the f
 
 <a name="RU_use"></a>
 ## Как его _использовать_?
-Для начала надо предупредить, что большинство входных данных данных должны иметь вид _переменной_/_массива_ в формате **json**. Подробное описание каждой функции можете посмотреть в [wiki](https://github.com/Panda58dev/wafflib/wiki).
+Подробное описание каждой функции можете посмотреть в [wiki](https://github.com/Panda58dev/wafflib/wiki).
 
 <a name="RU_req"></a>
 ## Требования
