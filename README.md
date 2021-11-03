@@ -13,7 +13,7 @@
 <a name="EN"></a>
 <a name="EN_what"></a>
 ## What is _Waff Lib_ for? 
-First of all, __Waff Lib__ is a library that contains data transfer functions over the __ssh__ protocol. Specifically, it is a product written in __php__ and using __libssh2__. The functions use the __PSR-12__ standard and are all commented out.
+This library is an object oriented __API__ for working with __ssh__ protocol.
 
 <a name="EN_use"></a>
 ## How to _use_ it?
@@ -29,7 +29,7 @@ To begin with, we should warn you that most of the input data should be in the f
 <a name="RU"></a>
 <a name="RU_what"></a>
 ## Для чего нужен _Waff Lib_?
-Прежде всего __Waff Lib__ - это библиотека, содержащая функции передачи данных по протоколу __ssh__. Конкретно - это продукт, написанный на __php__ и использующий __libssh2__. Функции используют стандарт __PSR-12__ и все они закомментированы.
+Эта библиотека является объектно ориентированным __API__ для работы с протоколом __ssh__.
 
 <a name="RU_use"></a>
 ## Как его _использовать_?
