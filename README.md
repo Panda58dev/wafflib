@@ -1,3 +1,6 @@
+![GitHub](https://img.shields.io/github/license/Panda58dev/Wafflib?logo=apache) 
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/Panda58dev/Wafflib?include_prereleases&logo=php)
+
 # Composition:
 -  [EN](#EN)
     - [What is __Waff Lib__ for?](#EN_what)
