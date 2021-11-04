@@ -18,6 +18,26 @@ This library is an object oriented __API__ for working with __ssh__ protocol.
 <a name="EN_use"></a>
 ## How to _use_ it?
 A detailed description of each function can be found in the [wiki](https://github.com/Panda58dev/wafflib/wiki).
+
+Example:
+```php
+use Wafflib\Basic\Connect;
+use Wafflib\Basic\Exec;
+use Wafflib\Basic\Copy;
+
+//Included the necessary files
+require 'src/Const.php';
+require 'vendor/autoload.php';
+
+//Make a connection and initialize the methods
+$connect = new Connect("127.0.0.1", "user", "pass");
+$file = new Copy;
+$exec = new Exec($connect->getSession());
+
+//Script вody
+$file->copy($connect->getSession(), '/home/user/text.txt', 'E:/My_docs/file.txt');
+$exec->exec('ls -all');
+```
 <a name="EN_req"></a>
 ## Requirements
 
@@ -34,6 +54,26 @@ A detailed description of each function can be found in the [wiki](https://githu
 <a name="RU_use"></a>
 ## Как его _использовать_?
 Подробное описание каждой функции можете посмотреть в [wiki](https://github.com/Panda58dev/wafflib/wiki).
+
+Пример:
+```php
+use Wafflib\Basic\Connect;
+use Wafflib\Basic\Exec;
+use Wafflib\Basic\Copy;
+
+//Подключаем необходимые файлы
+require 'src/Const.php';
+require 'vendor/autoload.php';
+
+//Производим коннет и инциализируем методы
+$connect = new Connect("127.0.0.1", "user", "pass");
+$file = new Copy;
+$exec = new Exec($connect->getSession());
+
+//Тело скрипта
+$file->copy($connect->getSession(), '/home/user/text.txt', 'E:/My_docs/file.txt');
+$exec->exec('ls -all');
+```
 
 <a name="RU_req"></a>
 ## Требования
