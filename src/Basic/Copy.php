@@ -4,11 +4,14 @@ namespace Wafflib\Basic;
 
 class Copy
 {
-
-
+    private $session;
+    public function __construct($session)
+    {
+        $this->session = $session;
+    }
 
     //Copying a file to the host machine
-    public function copy($session, string $remote_path, string $host_path)
+    public function copy(string $remote_path, string $host_path, $session = $this->session)
     {
         //Log entry
         Report::reportFile('Copying file [' . $remote_path . '] to the host-machine');

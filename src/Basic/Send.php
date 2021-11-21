@@ -4,8 +4,14 @@ namespace Wafflib\Basic;
 
 class Send
 {
+    private $session;
+    public function __construct($session)
+    {
+        $this->session = $session;
+    }
+
     //Sending files to remote machine
-    public function send($session, string $host_path, string $remote_path)
+    public function send(string $host_path, string $remote_path, $session = $this->session) 
     {
         //Log entry
         Report::reportFile('Sending a file [' . $host_path . '] to remote machine');

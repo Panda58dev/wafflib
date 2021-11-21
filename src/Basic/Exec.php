@@ -9,14 +9,15 @@ class Exec
     {
         $this->session = $session;
     }
-
-    public function exec(string $command)
+    
+    //Executing command on remote machine
+    public function exec(string $command, $session = $this->session)
     {
         //Log entry
-        Report::reportFile('Executing the command:' . PHP_EOL . '[------' . PHP_EOL . $command . PHP_EOL . '------];');
+        Report::reportFile('Executing the command:' . PHP_EOL . '[' . PHP_EOL . $command . PHP_EOL . '];');
 		//Executing the command
         print_r('> ' . $command . PHP_EOL);
-        $stream = ssh2_exec($this->session, $command);
+        $stream = ssh2_exec($session, $command);
         if ($stream) {
 			//withholding a response
             stream_set_blocking($stream, true);
@@ -24,7 +25,7 @@ class Exec
             $response = stream_get_contents($stream_out);
             print_r($response);
 			//Log entry
-            Report::reportFile('Response:' . PHP_EOL . '[------' . PHP_EOL . $response . '------];');
+            Report::reportFile('Response:' . PHP_EOL . '[' . PHP_EOL . $response . '];');
             return true;
         } else {
 			//Log entry
