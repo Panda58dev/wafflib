@@ -7,11 +7,15 @@
     - [What is __Waff Lib__ for?](#EN_what)
     - [How to __use__ it?](#EN_use)
     - [Requirements](#EN_req)
+    - [Help the project](#EN_help)
+    - [License](#EN_lic)
 
 -  [RU](#RU)
     - [Для чего нужен __Waff Lib__?](#RU_what)
     - [Как его __использовать__?](#RU_use)
     - [Требования](#RU_req)
+    - [Помощь проекту](#RU_help)
+    - [Лицензия](#RU_lic)
     - [Планы](#RU_plans)
     
 <a name="EN"></a>
@@ -50,6 +54,15 @@ $exec->exec('curl 127.0.0.1');
 - PHP v7.3 and higler. (Despite the fact that the code is written with backward compatibility, it is advisable to use new versions of PHP);
 - Extension **php_ssh2**. You can download the dll for **windows** on the website [PECL](https://pecl.php.net/package/ssh2);
 
+<a name="EN_help"></a>
+## ◻️ __Help__ the project
+I will be very grateful for the bugs found and moral support :)
+
+Write suggestions and ideas to the mail **panda58.dev@gmail.com**
+
+<a name="EN_lic"></a>
+## ◻️ License
+> Apache v2 © 2021 Panda58dev
 ----
 
 <a name="RU"></a>
@@ -87,6 +100,17 @@ $exec->exec('curl 127.0.0.1');
 ## ◻️ Требования
 - PHP *v7.3* и выше. (Не смотря на то, что код пишется с обратной совместимостью, желательно использовать новые версии PHP);
 - Расширение **php_ssh2**. Скачать dll для **windows** можно на сайте [PECL](https://pecl.php.net/package/ssh2);
+
+
+<a name="RU_help"></a>
+## ◻️ __Помощь__ проекту
+Буду очень благодарен за найденные баги и моральную поддержку :)
+
+Предложения и идеи пишите на почту **panda58.dev@gmail.com**
+
+<a name="RU_lic"></a>
+## ◻️ Лицензия
+> Apache v2 © 2021 Panda58dev
 
 <a name="RU_plans"></a>
 ## ◻️ Планы
