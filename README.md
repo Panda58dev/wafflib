@@ -25,6 +25,7 @@ A detailed description of each function can be found in the [wiki](https://githu
 
 Example:
 ```php
+<?php
 use Wafflib\Basic\Connect;
 use Wafflib\Basic\Exec;
 use Wafflib\Basic\Copy;
@@ -40,7 +41,8 @@ $exec = new Exec($connect->getSession());
 
 //Script вody
 $file->copy($connect->getSession(), '/home/user/text.txt', 'E:/My_docs/file.txt');
-$exec->exec('ls -all');
+$exec->exec('ls -al');
+$exec->exec('curl 127.0.0.1');
 ```
 <a name="EN_req"></a>
 ## Requirements
@@ -61,6 +63,7 @@ $exec->exec('ls -all');
 
 Пример:
 ```php
+<?php
 use Wafflib\Basic\Connect;
 use Wafflib\Basic\Exec;
 use Wafflib\Basic\Copy;
@@ -77,6 +80,7 @@ $exec = new Exec($connect->getSession());
 //Тело скрипта
 $file->copy($connect->getSession(), '/home/user/text.txt', 'E:/My_docs/file.txt');
 $exec->exec('ls -all');
+$exec->exec('curl 127.0.0.1');
 ```
 
 <a name="RU_req"></a>
